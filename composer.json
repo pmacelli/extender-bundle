@@ -1,0 +1,36 @@
+{
+    "name": "comodojo/extender-bundle",
+    "description": "Extender 2.X default bundle",
+    "type": "comodojo-bundle",
+    "license": "MIT",
+    "keywords": [],
+    "homepage": "https://extender.comodojo.org",
+    "support": {
+        "issues": "https://github.com/comodojo/extender-bundle/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Comodojo\\Extender\\Commands\\": "src/Comodojo/Extender/Commands"
+        }
+    },
+    "require": {
+        "comodojo/extender.framework": "dev-master",
+        "comodojo/comodojo-installer": "dev-master"
+    },
+    "extra": {
+        "commands": [
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\CacheClear",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\CacheStats",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\Info",
+                "scope": "extender"
+            }
+        ]
+    }
+}

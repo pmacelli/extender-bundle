@@ -11,8 +11,8 @@ class CacheClear extends AbstractCommand {
     protected function configure() {
 
         $this->setName('cache:clear')
-        ->setDescription('Clear dispatcher cache')
-        ->setHelp('This command will clear the whole dispatcher cache');
+        ->setDescription('Clear extender cache')
+        ->setHelp('This command will clear the whole extender cache');
 
     }
 

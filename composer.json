@@ -20,15 +20,55 @@
     "extra": {
         "commands": [
             {
-                "class": "\\Comodojo\\Extender\\Commands\\CacheClear",
-                "scope": "extender"
-            },
-            {
                 "class": "\\Comodojo\\Extender\\Commands\\CacheStats",
                 "scope": "extender"
             },
             {
+                "class": "\\Comodojo\\Extender\\Commands\\CacheClear",
+                "scope": "extender"
+            },
+            {
                 "class": "\\Comodojo\\Extender\\Commands\\Info",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\QueueInfo",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\QueueAdd",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerInfo",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerRefresh",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\TaskList",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\TaskExec",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\WorklogList",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\WorklogCount",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\WorklogById",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\WorklogByPid",
                 "scope": "extender"
             }
         ]

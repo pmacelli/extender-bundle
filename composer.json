@@ -48,6 +48,30 @@
                 "scope": "extender"
             },
             {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerList",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerAdd",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerGet",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerEnable",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerDisable",
+                "scope": "extender"
+            },
+            {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerRemove",
+                "scope": "extender"
+            },
+            {
                 "class": "\\Comodojo\\Extender\\Commands\\TaskList",
                 "scope": "extender"
             },

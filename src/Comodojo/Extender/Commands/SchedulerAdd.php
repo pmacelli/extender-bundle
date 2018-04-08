@@ -3,18 +3,18 @@
 use \Comodojo\Foundation\Console\AbstractCommand;
 use \Comodojo\RpcClient\RpcRequest;
 use \Comodojo\Extender\Commands\Utils\TaskTableLoader;
-use \Comodojo\Extender\Commands\Utils\TaskRequestWizard;
+use \Comodojo\Extender\Commands\Utils\ScheduleWizard;
 use \Comodojo\Extender\Commands\Utils\SocketBridge;
 use \Symfony\Component\Console\Input\InputInterface;
 use \Symfony\Component\Console\Output\OutputInterface;
 
-class QueueAdd extends AbstractCommand {
+class SchedulerAdd extends AbstractCommand {
 
     protected function configure() {
 
-        $this->setName('queue:add')
-        ->setDescription('Add a task to queue')
-        ->setHelp('Add a task to current queue to immediate execution');
+        $this->setName('scheduler:add')
+        ->setDescription('Add a schedule')
+        ->setHelp('Add a job to current schedule');
 
     }
 
@@ -23,20 +23,22 @@ class QueueAdd extends AbstractCommand {
         $configuration = $this->getConfiguration();
         $tasks = TaskTableLoader::load($configuration);
 
-        $wizard = new TaskRequestWizard(
+        $wizard = new ScheduleWizard(
             $input,
             $output,
             $this->getHelper('question'),
             $configuration,
             $tasks
         );
-        $message = $wizard->start();
+        list($schedule, $task) = $wizard->start();
 
         $bridge = new SocketBridge($configuration);
-        $uid = $bridge->send(RpcRequest::create("queue.add", [$message->export()]));
+        $id = $bridge->send(RpcRequest::create("scheduler.add", [
+            $schedule->export(),
+            $task->export()
+        ]));
 
-        $shortuid = $this->getHelper('formatter')->truncate($uid, 8);
-        $output->writeln("Task submitted (uid: $shortuid)");
+        $output->writeln("Schedule submitted (id: $id)");
 
     }
 

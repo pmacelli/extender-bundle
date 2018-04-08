@@ -101,7 +101,7 @@ class TaskRequestWizard {
         $selected = $this->helper->ask($this->input, $this->output, $question);
 
         $this->prompt[] = "<info>[$selected]</info>";
-        return [self::selectTask($this->tasks, $selected), $selected];
+        return [$selected, self::selectTask($this->tasks, $selected)];
 
     }
 

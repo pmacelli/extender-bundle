@@ -72,6 +72,10 @@
                 "scope": "extender"
             },
             {
+                "class": "\\Comodojo\\Extender\\Commands\\SchedulerExec",
+                "scope": "extender"
+            },
+            {
                 "class": "\\Comodojo\\Extender\\Commands\\TaskList",
                 "scope": "extender"
             },

@@ -11,6 +11,22 @@ use \Symfony\Component\Console\Question\ConfirmationQuestion;
 use \Symfony\Component\Console\Question\ChoiceQuestion;
 use \RuntimeException;
 
+/**
+ * @package     Comodojo Extender (default bundle)
+ * @author      Marco Giovinazzi <marco.giovinazzi@comodojo.org>
+ * @license     MIT
+ *
+ * LICENSE:
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+
 class TaskRequestWizard {
 
     use ConfigurationTrait;
@@ -110,6 +126,7 @@ class TaskRequestWizard {
         $prompt = $this->getPrompt("Niceness? (0)");
         $question = new Question($prompt, '0');
         $question->setValidator(function($niceness) {
+            $niceness = (int) $niceness;
             if ((20 <= $niceness) || ($niceness >= 20)) {
                 throw new RuntimeException(
                     'The niceness should be a integer in range (-20,+20)'
@@ -129,6 +146,7 @@ class TaskRequestWizard {
         $prompt = $this->getPrompt("Max exec time? ($default secs)");
         $question = new Question($prompt, $default);
         $question->setValidator(function($secs) {
+            $secs = (int) $secs;
             if ( !is_int($secs) || $secs <= 0) {
                 throw new RuntimeException(
                     'Maxtime should be an integer > 0'

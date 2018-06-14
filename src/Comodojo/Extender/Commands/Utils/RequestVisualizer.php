@@ -64,19 +64,19 @@ class RequestVisualizer {
         $pipe = $request->getPipe();
         if ($pipe instanceof Request) {
             $this->visual_items[] = new TableSeparator();
-            $this->getVisualItemOutput($pipe, '<comment>└─[ pipe ]─></comment>', $level+1);
+            $this->getVisualItemOutput($pipe, '<comment>=[ pipe ]=></comment>', $level+1);
         }
 
         $done = $request->getOnDone();
         if ($done instanceof Request) {
             $this->visual_items[] = new TableSeparator();
-            $this->getVisualItemOutput($done, '<info>└─[ done ]─></info>', $level+1);
+            $this->getVisualItemOutput($done, '<info>=[ done ]=></info>', $level+1);
         }
 
         $fail = $request->getOnFail();
         if ($fail instanceof Request) {
             $this->visual_items[] = new TableSeparator();
-            $this->getVisualItemOutput($fail, '<fg=red>└─[ fail ]─></>', $level+1);
+            $this->getVisualItemOutput($fail, '<fg=red>=[ fail ]=></>', $level+1);
         }
 
     }

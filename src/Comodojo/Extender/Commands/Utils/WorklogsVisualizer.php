@@ -96,7 +96,7 @@ class WorklogsVisualizer {
                 $wklg['task'],
                 WorklogStatusFormatter::format($wklg['status']),
                 date('d.m.y H:i:s', $wklg['start_time']),
-                date('d.m.y H:i:s', $wklg['end_time'])
+                empty($wklg['end_time']) ? 'N/A' : date('d.m.y H:i:s', $wklg['end_time'])
             ]);
         }
 
@@ -124,7 +124,7 @@ class WorklogsVisualizer {
                 $wklg['task'],
                 WorklogStatusFormatter::format($wklg['status']),
                 date('d.m.y H:i:s', $wklg['start_time']),
-                date('d.m.y H:i:s', $wklg['end_time'])
+                empty($wklg['end_time']) ? 'N/A' : date('d.m.y H:i:s', $wklg['end_time'])
             ]);
             $table->addRow([
                 new TableSeparator(['colspan' => 9])

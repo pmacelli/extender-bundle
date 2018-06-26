@@ -58,7 +58,7 @@ class CacheStats extends AbstractCommand {
             ]
         )->setRows(
             [
-                ['Status', $stats->getStats() === 0 ? 'ACTIVE' : 'ERROR'],
+                ['Status', $stats->getState() === 0 ? 'ACTIVE' : 'ERROR'],
                 ['Objects', $stats->getObjects()]
             ]
         );

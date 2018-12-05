@@ -14,8 +14,8 @@
         }
     },
     "require": {
-        "comodojo/extender.framework": "dev-master",
-        "comodojo/comodojo-installer": "dev-master"
+        "comodojo/extender.framework": "^2.0",
+        "comodojo/comodojo-installer": "^1.0"
     },
     "extra": {
         "commands": [

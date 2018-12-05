@@ -13,6 +13,7 @@
             "Comodojo\\Extender\\Commands\\": "src/Comodojo/Extender/Commands"
         }
     },
+    "minimum-stability": "dev",
     "require": {
         "comodojo/extender.framework": "dev-master",
         "comodojo/comodojo-installer": "dev-master"

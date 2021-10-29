@@ -50,6 +50,8 @@ class SchedulerDisable extends AbstractCommand {
 
         $output->write($info ? 'done!' : 'error!');
         $output->writeln('');
+        
+        return 0;
 
     }
 

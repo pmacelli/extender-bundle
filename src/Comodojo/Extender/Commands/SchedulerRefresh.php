@@ -40,6 +40,8 @@ class SchedulerRefresh extends AbstractCommand {
         $result = $bridge->send(RpcRequest::create("scheduler.refresh"));
         $output->write($result ? "done!" : "failed ($result)");
         $output->writeln('');
+        
+        return 0;
 
     }
 

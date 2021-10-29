@@ -40,6 +40,8 @@ class Info extends AbstractCommand {
             $version->getDescription(),
             '-----------------------------'
         ]);
+        
+        return 0;
 
     }
 

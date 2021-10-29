@@ -55,9 +55,9 @@ class SchedulerAdd extends AbstractCommand {
         ]));
 
         $output->writeln("Schedule submitted (id: $id)");
+        
+        return 0;
 
     }
     
-    return 0;
-
 }

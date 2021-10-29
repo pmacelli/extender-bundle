@@ -43,6 +43,8 @@ class SchedulerInfo extends AbstractCommand {
         $info = $bridge->send(RpcRequest::create("scheduler.info"));
 
         $visualizer->render($info);
+        
+        return 0;
 
     }
 

@@ -43,6 +43,8 @@ class CacheClear extends AbstractCommand {
         $manager->clear();
         $output->write('done!');
         $output->writeln('');
+        
+        return 0;
 
     }
 

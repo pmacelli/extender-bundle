@@ -48,6 +48,8 @@ class TaskList extends AbstractCommand {
         }
 
         $table->render();
+        
+        return 0;
 
     }
 

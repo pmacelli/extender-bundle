@@ -51,6 +51,8 @@ class SchedulerList extends AbstractCommand {
         );
 
         $visualizer->render($schedules);
+        
+        return 0;
 
     }
 

@@ -63,6 +63,8 @@ class SchedulerExec extends AbstractCommand {
 
         $shortuid = $this->getHelper('formatter')->truncate($uid, 8);
         $output->writeln(" done! (uid: $shortuid)");
+        
+        return 0;
 
     }
 

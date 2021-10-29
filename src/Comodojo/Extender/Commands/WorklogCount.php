@@ -40,6 +40,8 @@ class WorklogCount extends AbstractCommand {
 
         $output->write("There are <info>$count</info> worklogs recorded so far");
         $output->writeln('');
+        
+        return 0;
 
     }
 

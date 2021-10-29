@@ -77,6 +77,8 @@ class WorklogByPid extends AbstractCommand {
         }
 
         $visualizer->render($wklgs, $mode);
+        
+        return 0;
 
     }
 

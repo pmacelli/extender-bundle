@@ -53,6 +53,8 @@ class QueueAdd extends AbstractCommand {
 
         $shortuid = $this->getHelper('formatter')->truncate($uid, 8);
         $output->writeln("Task submitted (uid: $shortuid)");
+        
+        return 0;
 
     }
 

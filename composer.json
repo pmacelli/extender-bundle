@@ -15,7 +15,7 @@
     },
     "require": {
         "pmarcelli/extender.framework": "dev-extender.framewor_u7320",
-        "pmarcelli/comodojo-installer": "dev-comodojo-installer_u7320",
+        "pmarcelli/comodojo-installer": "dev-comodojo-installer_u7320"
     },
     "extra": {
         "commands": [

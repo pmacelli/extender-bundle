@@ -75,6 +75,8 @@ class TaskExec extends AbstractCommand {
             $this->getHelper('formatter')
         );
         $visualizer->render($result);
+        
+        return 0;
 
     }
 

@@ -59,6 +59,8 @@ class SchedulerGet extends AbstractCommand {
 
         $s_visualizer->render(Schedule::createFromExport($schedule));
         $r_visualizer->render(Request::createFromExport($request));
+        
+        return 0;
 
     }
 

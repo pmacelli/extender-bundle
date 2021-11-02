@@ -43,6 +43,8 @@ class QueueInfo extends AbstractCommand {
         $info = $bridge->send(RpcRequest::create("queue.info"));
 
         $visualizer->render($info);
+        
+        return 0;
 
     }
 

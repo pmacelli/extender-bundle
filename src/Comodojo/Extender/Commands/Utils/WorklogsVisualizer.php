@@ -86,7 +86,12 @@ class WorklogsVisualizer {
                 ['id', 'pid', 'jid', 'uid', 'puid', 'task', 'status', 'start', 'end']
             ]
         );
+        
         foreach ($wklgs as $wklg) {
+            
+            //PHP Fatal error:  Uncaught TypeError: Argument 1 passed to Symfony\Component\Console\Helper\FormatterHelper::truncate() must be of the type string, null given            
+            if(is_null($wklg['parent_uid'])) $wklg['parent_uid'] = "";
+            
             $table->addRow([
                 $wklg['id'],
                 $wklg['pid'],

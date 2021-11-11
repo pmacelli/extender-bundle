@@ -2,6 +2,8 @@
 
 Default service-bundle for comodojo/extender.
 
+** This is the development branch, please do not use it in production**
+
 For more information, visit [extender.comodojo.org](https://extender.comodojo.org).
 
 ## Installation

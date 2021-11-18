@@ -1,5 +1,5 @@
 {
-    "name": "comodojo/extender-bundle",
+    "name": "pmarcelli/extender-bundle",
     "description": "Extender 2.X default bundle",
     "type": "comodojo-bundle",
     "license": "MIT",
@@ -14,8 +14,8 @@
         }
     },
     "require": {
-        "comodojo/extender.framework": "^2.0",
-        "comodojo/comodojo-installer": "^1.0"
+        "pmarcelli/extender.framework": "dev-extender-framework_u7320_2",
+        "pmarcelli/comodojo-installer": "dev-comodojo-installer_u7320_2"
     },
     "extra": {
         "commands": [
